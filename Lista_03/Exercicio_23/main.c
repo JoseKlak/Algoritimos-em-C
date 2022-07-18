@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*Foi feita uma pesquisa de canal de TV em várias casas da cidade de João Câmara. Para cada
-casa visitada, foi preenchida uma ficha contendo o número do canal (3, 5, 8, 11 ou 13) e o número
-de pessoas que estavam assistindo o canal naquela casa. Faça um algoritmo que:
-a. Leia a informação da quantidade de casas participantes da pesquisa.
-b. Receba as informações coletadas em cada uma das casas participantes da
-c. pesquisa: a informação do canal que estava sendo assistido e a quantidade de
+/*Foi feita uma pesquisa de canal de TV em vï¿½rias casas da cidade de Joï¿½o Cï¿½mara. Para cada
+casa visitada, foi preenchida uma ficha contendo o nï¿½mero do canal (3, 5, 8, 11 ou 13) e o nï¿½mero
+de pessoas que estavam assistindo o canal naquela casa. Faï¿½a um algoritmo que:
+a. Leia a informaï¿½ï¿½o da quantidade de casas participantes da pesquisa.
+b. Receba as informaï¿½ï¿½es coletadas em cada uma das casas participantes da
+c. pesquisa: a informaï¿½ï¿½o do canal que estava sendo assistido e a quantidade de
 d. pessoas que estava assistindo aquele canal na casa.
 e. Contabilize quantas pessoas estava assistindo cada canal (leve em conta a
 f. quantidade de pessoas que assistia cada canal em cada casa)
-g. Ao finalizar a leitura de todas as fichas, escreva o número do canal e sua
-h. respectiva porcentagem de audiência*/
+g. Ao finalizar a leitura de todas as fichas, escreva o nï¿½mero do canal e sua
+h. respectiva porcentagem de audiï¿½ncia*/
 
 int main()
 {
@@ -19,6 +19,7 @@ int main()
 
     printf("Insira a quantidade de casas participantes na pesquisa: ");
     scanf("%d", &qntCasa);
+    // alo
 
     for(i=0; i<qntCasa; i++){
 
