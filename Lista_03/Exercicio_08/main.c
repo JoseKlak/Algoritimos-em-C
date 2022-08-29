@@ -6,14 +6,14 @@
 
 int main()
 {
-    float idade, auxIdade = 9999;
+    int idade, auxIdade = 9999;
     char nome[50], auxNome[50];
 
     for(int i=0; i<10; i++){
         printf("Insira o %d nome: ", i+1);
-        fgets(nome, 50, stdin);
+        gets(nome);
         printf("Insira a idade: ");
-        scanf("%f", &idade);
+        scanf("%d", &idade);
         fflush(stdin);
 
         if(idade < auxIdade){
