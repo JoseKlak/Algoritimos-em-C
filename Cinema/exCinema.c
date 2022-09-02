@@ -1,18 +1,23 @@
 #include <stdio.h>
 #include "colors.h"
+#include <locale.h>
+
 
 int mostrarMenu(int poltronas[5][5]) {
     int opcao, cont=1;
 
-        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        printf("\e[1;1H\e[2J");
         foreground(WHITE);
         printf("Livre     -  Branco\n");
-        foreground(RED);
-        printf("Ocupado   -  Vermelho\n");
+        foreground(GREEN);
+        printf("Ocupado   -  Verde\n");
         foreground(YELLOW);
         printf("Reservado -  Amarelo\n\n");
         style(RESETALL);
         printf("Poltronas: \n\n");
+        printf("--------------------\n");
+        printf("--------TELA--------\n");
+        printf("--------------------\n");
         for(int i=0; i<5; i++) {
             for (int j=0; j<5; j++) {
                 if((cont < 10) && (poltronas[i][j] == 0))
@@ -20,13 +25,13 @@ int mostrarMenu(int poltronas[5][5]) {
                 else if((cont >= 10) && (poltronas[i][j] == 0))
                     printf("[%d]", cont);
                 else if(poltronas[i][j] == 1){
-                    foreground(RED);
-                    printf("[CC]");
+                    foreground(GREEN);
+                    printf("[<>]");
                     style(RESETALL);
                 }
                 else if(poltronas[i][j] == 2){
                     foreground(YELLOW);
-                    printf("[RR]");
+                    printf("[><]");
                     style(RESETALL);
                 }
                 cont++;
@@ -62,15 +67,18 @@ void compra(int poltronas[5][5]) {
 
     int cont=1, escolha;
 
-    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    printf("\e[1;1H\e[2J");
     foreground(WHITE);
     printf("Livre     -  Branco\n");
-    foreground(RED);
-    printf("Ocupado   -  Vermelho\n");
+    foreground(GREEN);
+    printf("Ocupado   -  Verde\n");
     foreground(YELLOW);
     printf("Reservado -  Amarelo\n\n");
     style(RESETALL);
     printf("Poltronas: \n\n");
+    printf("--------------------\n");
+    printf("--------TELA--------\n");
+    printf("--------------------\n");
     for(int i=0; i<5; i++) {
         for (int j=0; j<5; j++) {
             if((cont < 10) && (poltronas[i][j] == 0))
@@ -78,13 +86,13 @@ void compra(int poltronas[5][5]) {
             else if((cont >= 10) && (poltronas[i][j] == 0))
                 printf("[%d]", cont);
             else if(poltronas[i][j] == 1){
-                foreground(RED);
-                printf("[CC]");
+                foreground(GREEN);
+                printf("[<>]");
                 style(RESETALL);
             }
             else if(poltronas[i][j] == 2){
                 foreground(YELLOW);
-                printf("[RR]");
+                printf("[><]");
                 style(RESETALL);
             }
             cont++;
@@ -106,15 +114,18 @@ void reserva(int poltronas[5][5]) {
     
     int cont=1, escolha;
 
-    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    printf("\e[1;1H\e[2J");
     foreground(WHITE);
     printf("Livre     -  Branco\n");
-    foreground(RED);
-    printf("Ocupado   -  Vermelho\n");
+    foreground(GREEN);
+    printf("Ocupado   -  Verde\n");
     foreground(YELLOW);
     printf("Reservado -  Amarelo\n\n");
     style(RESETALL);
     printf("Poltronas: \n\n");
+    printf("--------------------\n");
+    printf("--------TELA--------\n");
+    printf("--------------------\n");
     for(int i=0; i<5; i++) {
         for (int j=0; j<5; j++) {
             if((cont < 10) && (poltronas[i][j] == 0))
@@ -122,13 +133,13 @@ void reserva(int poltronas[5][5]) {
             else if((cont >= 10) && (poltronas[i][j] == 0))
                 printf("[%d]", cont);
             else if(poltronas[i][j] == 1){
-                foreground(RED);
-                printf("[CC]");
+                foreground(GREEN);
+                printf("[<>]");
                 style(RESETALL);
             }
             else if(poltronas[i][j] == 2){
                 foreground(YELLOW);
-                printf("[RR]");
+                printf("[><]");
                 style(RESETALL);
             }
             cont++;
@@ -150,15 +161,18 @@ void cancela(int poltronas[5][5]) {
 
     int cont=1, escolha;
 
-    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    printf("\e[1;1H\e[2J");
         foreground(WHITE);
         printf("Livre     -  Branco\n");
-        foreground(RED);
-        printf("Ocupado   -  Vermelho\n");
+        foreground(GREEN);
+        printf("Ocupado   -  Verde\n");
         foreground(YELLOW);
         printf("Reservado -  Amarelo\n\n");
         style(RESETALL);
         printf("Poltronas: \n\n");
+        printf("--------------------\n");
+        printf("--------TELA--------\n");
+        printf("--------------------\n");
             for(int i=0; i<5; i++) {
                 for (int j=0; j<5; j++) {
                     if((cont < 10) && (poltronas[i][j] == 0))
@@ -166,13 +180,13 @@ void cancela(int poltronas[5][5]) {
                     else if((cont >= 10) && (poltronas[i][j] == 0))
                         printf("[%d]", cont);
                     else if(poltronas[i][j] == 1){
-                        foreground(RED);
-                        printf("[CC]");
+                        foreground(GREEN);
+                        printf("[<>]");
                         style(RESETALL);
                     }
                     else if(poltronas[i][j] == 2){
                         foreground(YELLOW);
-                        printf("[RR]");
+                        printf("[><]");
                         style(RESETALL);
                     }
                     cont++;
@@ -192,9 +206,28 @@ void cancela(int poltronas[5][5]) {
 
 int main()
 {
+    setlocale(LC_ALL, "Portuguese");
+
     int opcao, poltronas[5][5], cont=1, escolha;
 
     zeraMatriz(poltronas);
+
+    /*printf("Escolha o filme: \n");
+    printf("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n");
+    printf("⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿\n");
+    printf("⣿⠤⠄⠄⠙⢿⣿⣿⣿⡿⠿⠛⠛⢛⣧⣿⠇⠄⠂⠄⠄⠄⠘⣿⣿⣿⣿⠁⠄⢻\n");
+    printf("⣿⣿⣿⣿⣶⣄⣾⣿⢟⣼⠒⢲⡔⣺⣿⣧⠄⠄⣠⠤⢤⡀⠄⠟⠉⣠⣤⣤⣤⣾\n");
+    printf("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣀⣬⣵⣿⣿⣿⣶⡤⠙⠄⠘⠃⠄⣴⣾⣿⣿⣿⣿⣿\n");
+    printf("⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢻⠿⢿⣿⣿⠿⠋⠁⠄⠂⠉⠒⢘⣿⣿⣿⣿⣿⣿⣿\n");
+    printf("⣿⣿⣿⣿⣿⣿⣿⣿⡿⣡⣷⣶⣤⣤⣀⡀⠄⠄⠄⠄⠄⠄⠄⣾⣿⣿⣿⣿⣿⣿\n");
+    printf("⣿⣿⣿⣿⣿⣿⣿⡿⣸⣿⣿⣿⣿⣿⣿⣿⣷⣦⣰⠄⠄⠄⠄⢾⠿⢿⣿⣿⣿⣿\n");
+    printf("⣿⡿⠋⣡⣾⣿⣿⣿⡟⠉⠉⠈⠉⠉⠉⠉⠉⠄⠄⠄⠑⠄⠄⠐⡇⠄⠈⠙⠛⠋\n");
+    printf("⠋⠄⣾⣿⣿⣿⣿⡿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢠⡇⠄⠄⠄⠄⠄\n");
+    printf("⠄⢸⣿⣿⣿⣿⣿⣯⠄⢠⡀⠄⠄⠄⠄⠄⠄⠄⠄⣀⠄⠄⠄⠄⠁⠄⠄⠄⠄⠄\n");
+    printf("⠁⢸⣿⣿⣿⣿⣿⣯⣧⣬⣿⣤⣐⣂⣄⣀⣠⡴⠖⠈⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄\n");
+    printf("⠈⠈⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣽⣉⡉⠉⠈⠁⠄⠁⠄⠄⠄⠄⡂⠄⠄⠄⠄⠄\n");
+    printf("⠄⠄⠙⣿⣿⠿⣿⣿⣿⣿⣷⡤⠈⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠠⠔⠄⠄⠄⠄⠄\n");
+    printf("⠄⠄⠄⡈⢿⣷⣿⣿⢿⣿⣿⣷⡦⢤⡀⠄⠄⠄⠄⠄⠄⢐⣠⡿⠁⠄⠄⠄⠄⠄\n");*/
 
     do {
 
