@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1663694817 source:c:\users\tampe\desktop\connect\lista_arranjo_dinamica2\cliente.c
+	<stdio.h>
+	"lista_arranjo_dinamica.h"
+
+1663693476 c:\users\tampe\desktop\connect\lista_arranjo_dinamica2\lista_arranjo_dinamica.h
+
